@@ -1,1 +1,29 @@
-# Level 2 solution
+# Level 2 → Level 3
+# -----------------
+# Objective:
+# The password is stored in a file called "--spaces in this filename--"
+# located in the home directory.
+
+# Connect to the server:
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+# Enter password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+# Once logged in:
+# List the files in the home directory
+ls -la
+
+# Found file: '--spaces in this filename--'
+# Issue:
+# - Filenames starting with "--" are often treated as command options.
+# - Spaces in the name split it into separate arguments.
+# Fix:
+# - Prefix with "./" to show it's a file in the current directory.
+# - Escape the spaces with "\" so the shell reads the name as one argument.
+cat ./--spaces\ in\ this\ filename--
+
+# Output / Findings:
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+# Next level password:
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
