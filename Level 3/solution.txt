@@ -1,1 +1,25 @@
-# Level 3 solution
+# Level 3 → Level 4
+# -----------------
+# Objective:
+# The password is stored in a hidden file inside the "inhere" directory.
+
+# Connect to the server:
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+# Enter password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+# Once logged in:
+# Go into the "inhere" directory
+cd inhere
+ls -la
+
+# Found hidden file: "...Hiding-From-You"
+# Tried using cd but it failed because it's a file, not a directory.
+# Use cat to read its contents.
+cat ...Hiding-From-You
+
+# Output / Findings:
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+# Next level password:
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
