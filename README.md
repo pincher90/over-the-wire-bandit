@@ -1,1 +1,1 @@
-# OverTheWire Bandit Solutions
+# Over The Wire Bandit Solutions
