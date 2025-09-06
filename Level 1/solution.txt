@@ -1,1 +1,26 @@
-# Level 1 Solution
+# Level 1 → Level 2
+# -----------------
+# Objective:
+# Read the password from a file literally named "-" in the home directory.
+
+# Connect to the server:
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+# Enter password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+# Once logged in:
+# List the files in the home directory
+ls -la
+
+# Found file: '-'
+# Normally, "-" tells Linux commands to read what you type on the keyboard.
+# But here "-" is the actual file name. To make "cat" treat it like a file,
+# we give its path explicitly with "./-".
+cat ./-
+
+# Output / Findings:
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+# Next level password:
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+
